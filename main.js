@@ -22,8 +22,6 @@ class Calculator {
             input.value += number;
             this.second += number;
         }
-        console.log("first", +this.first);
-        console.log("second= ", +this.second);
     }
 
     writeOperator(operator) {
@@ -35,13 +33,36 @@ class Calculator {
     }
 
     equal() {
-       console.log(parseInt(this.first) + parseInt(this.second));
-       console.log(this.operator);
-       input.value = '';
-       input.value = parseInt(this.first) + parseInt(this.second);
-       this.flag = false;
-       this.first = parseInt(this.first) + parseInt(this.second);
-       this.second = 0;
+       switch (this.operator){
+           case this.operator = "+":
+               input.value = '';
+               input.value = parseInt(this.first) + parseInt(this.second);
+               this.flag = false;
+               this.first = parseInt(this.first) + parseInt(this.second);
+               this.second = 0;
+               break;
+           case this.operator = "-":
+               input.value = '';
+               input.value = parseInt(this.first) - parseInt(this.second);
+               this.flag = false;
+               this.first = parseInt(this.first) - parseInt(this.second);
+               this.second = 0;
+               break;
+           case this.operator = "*":
+               input.value = '';
+               input.value = parseInt(this.first) * parseInt(this.second);
+               this.flag = false;
+               this.first = parseInt(this.first) * parseInt(this.second);
+               this.second = 0;
+               break;
+           case this.operator = "/":
+               input.value = '';
+               input.value = parseInt(this.first) / parseInt(this.second);
+               this.flag = false;
+               this.first = parseInt(this.first) / parseInt(this.second);
+               this.second = 0;
+               break;
+       }
     }
 }
 
