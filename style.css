@@ -19,7 +19,20 @@ html {
     width: 400px;
 }
 
-.calculator-screen {
+#historyScreen {
+    width: 100%;
+    font-size: 2rem;
+    height: 150px;
+    border: none;
+    background-color: #252525;
+    color: gray;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
+    overflow-y: scroll;
+}
+
+.calculatorScreen {
     width: 100%;
     font-size: 5rem;
     height: 80px;
